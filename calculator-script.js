@@ -23,10 +23,6 @@ let peopleValue = 1;
 */
 
 function getBillValue() {
-  if (inputBill.value.includes(',')) {
-    inputBill.value = inputBill.value.replace(',', '.');
-  }
-
   // update bill value
   billValue = parseFloat(inputBill.value);
 
