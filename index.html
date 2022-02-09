@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- PAGE_INFO_GRP -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator App</title>
+
+    <!-- PAGE_TAB_ICON_GRP -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- CUSTOM_STYLES_GRP -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- FONTS_GRP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- LOGO_GRP -->
+    <div id="logo">
+      <img src="./images/logo.svg" alt="App logo" />
+    </div>
+
+    <!-- CALCULATOR_GRP -->
+    <main id="calculator">
+      <div id="container">
+        <!-- INPUT_VALUES - START -->
+        <div id="desktop-input-values">
+          <!-- BIL_GRP -->
+          <section id="bill">
+            <h2 class="section-title">Bill</h2>
+            <div class="input-container">
+              <img
+                src="./images/icon-dollar.svg"
+                alt="Dolar sign"
+                class="image"
+              />
+              <label for="bill">
+                <input
+                  type="number"
+                  name="bill"
+                  id="input-bill"
+                  class="input-area"
+                  placeholder="0.00"
+                />
+              </label>
+            </div>
+          </section>
+
+          <!-- TIP_SELECTOR_GRP -->
+          <section id="tip-selector">
+            <h2 class="section-title">Select Tip %</h2>
+            <div id="tip-selector-container">
+              <button class="btn btn-tip" data-tip-value="0.05">5%</button>
+              <button class="btn btn-tip" data-tip-value="0.10">10%</button>
+              <button class="btn btn-tip btn-active" data-tip-value="0.15">
+                15%
+              </button>
+              <button class="btn btn-tip" data-tip-value="0.25">25%</button>
+              <button class="btn btn-tip" data-tip-value="0.50">50%</button>
+              <!-- custom_value -->
+              <label for="custom tip">
+                <input
+                  type="number"
+                  name="custom tip"
+                  class="btn custom-tip"
+                  data-tip-custom
+                  placeholder="Custom"
+                />
+              </label>
+            </div>
+          </section>
+
+          <!-- PEOPLE_GRP -->
+          <section id="people">
+            <div class="people-flex">
+              <h2 class="section-title">Number of People</h2>
+              <h2 id="error" class="section-title hidden">Can't be zero</h2>
+            </div>
+            <div class="input-container">
+              <img
+                src="./images/icon-person.svg"
+                alt="Person icon"
+                class="image"
+              />
+              <label for="people">
+                <input
+                  type="number"
+                  name="people"
+                  id="input-people"
+                  class="input-area"
+                  placeholder="5"
+                />
+              </label>
+            </div>
+          </section>
+        </div>
+        <!-- INPUT VALUES - END -->
+
+        <!-- TIP DISPLAY - START -->
+        <div id="desktop-tip-display">
+          <section id="tip-area">
+            <div class="tip-container">
+              <!-- individual -->
+              <div class="tip-flex">
+                <div>
+                  <h2 class="tip-title">Tip Amount</h2>
+                  <p class="tip-type">/ person</p>
+                </div>
+                <p class="tip-value tip-per-person">$0.00</p>
+              </div>
+              <!-- total -->
+              <div class="tip-flex">
+                <div>
+                  <h2 class="tip-title">Total</h2>
+                  <p class="tip-type">/ person</p>
+                </div>
+                <p class="tip-value total-per-person">$0.00</p>
+              </div>
+              <!-- calculate/reset -->
+              <button id="reset-btn" class="btn btn-action">RESET</button>
+            </div>
+          </section>
+        </div>
+        <!-- TIP DISPLAY - END -->
+      </div>
+    </main>
+
+    <!-- SCRIPTS_GRP -->
+    <script src="./calculator-script.js"></script>
+  </body>
+</html>
